@@ -22,6 +22,10 @@ async def hello_world(_):
 
 # Figure 5 Python waits for 2 nanoseconds
 @cocotb.test()
+
+#import keyword
+#help("async")
+
 async def wait_2ns(_):
     """Waits for two ns then prints"""
     await Timer(2, units="ns")
