@@ -49,7 +49,7 @@ async def counter(name, delay, count):
 async def do_not_wait(_):
     """Launch a counter"""
     logger.info("start counting to 3")
-    cocotb.start_soon(counter("simple count", 1, 3))
+    cocotb.start_soon(counter("simple count", 1, 3)) #Schedule a coroutine to be run concurrently || help(cocotb.start_soon)
     logger.info("ignored running_task")
 
 
